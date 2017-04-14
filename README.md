@@ -1,5 +1,5 @@
-# angular2-registration-login-example
+# Prova Delínea
 
-Angular 2 User Registration and Login Example & Tutorial
+Cadastro de Usuários com Angular2
 
-To see a demo and further details go to http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+Em produção http://bruninja.github.io/
