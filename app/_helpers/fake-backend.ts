@@ -35,7 +35,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                     })));
                 } else {
                     // else return 400 bad request
-                    connection.mockError(new Error('Username or password is incorrect'));
+                    connection.mockError(new Error('Usuário ou Senha estão incorretos'));
                 }
 
                 return;
