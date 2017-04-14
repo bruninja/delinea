@@ -1,12 +1,23 @@
-﻿<div class="col-md-6 col-md-offset-3">
-    <h1>Olá {{currentUser.firstName}}!</h1>
-    <p>Você está logado!!</p>
-    <h3>Usuários Registrados:</h3>
-    <ul>
-        <li *ngFor="let user of users">
-            {{user.username}} ({{user.firstName}} {{user.lastName}})
-            - <a (click)="deleteUser(user.id)">Apagar</a>
-        </li>
-    </ul>
+﻿<div class="col-md-12">
+    <p>Olá {{currentUser.firstName}}! Você está logado!!</p>
     <p><a [routerLink]="['/login']">Sair</a></p>
+    <h2 class="text-center">Listagem de Candidatos</h2>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome Completo</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Funcionalidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.nomeCompleto}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.telefone}}</td>
+        <td><a (click)="deleteUser(user.id)">Apagar</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

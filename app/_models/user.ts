@@ -1,7 +1,19 @@
 ﻿export class User {
     id: number;
+    nomeCompleto: string;
+    cpf: number;
+    rg: number;
+    nascimento: number;
+    telefone: number;
     username: string;
+    email: number;
     password: string;
-    firstName: string;
-    lastName: string;
 }
+
+// export class User {
+//     id: number;
+//     username: string;
+//     password: string;
+//     firstName: string;
+//     lastName: string;
+// }
