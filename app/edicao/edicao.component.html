@@ -1,6 +1,6 @@
 ﻿<div class="col-md-8 col-md-offset-2">
     <h2 class="text-center">Edição de Candidatos</h2>
-    <form name="form" class="form-horizontal" (ngSubmit)="f.form.valid && editar()" #f="ngForm" novalidate>
+    <form name="form" class="form-horizontal" (ngSubmit)="f.form.valid && salvar()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
             <label for="nomeCompleto" class="col-sm-3 control-label">Nome Completo</label>
             <div class="col-sm-9">

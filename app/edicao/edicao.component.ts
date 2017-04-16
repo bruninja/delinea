@@ -32,17 +32,18 @@ export class EditarComponent implements OnInit {
       this.location.back();
     }
 
-    // editar() {
-    //     this.loading = true;
-    //     this.userService.create(this.model)
-    //         .subscribe(
-    //             data => {
-    //                 this.alertService.success('Cadastro realizado com Sucesso', true);
-    //                 this.router.navigate(['/login']);
-    //             },
-    //             error => {
-    //                 this.alertService.error(error);
-    //                 this.loading = false;
-    //             });
-    // }
+
+    salvar() {
+        this.loading = true;
+        this.userService.update(this.user)
+            .subscribe(
+                data => {
+                    this.alertService.success('Atualizado  realizado com Sucesso', true);
+                    this.router.navigate(['/login']);
+                },
+                error => {
+                    this.alertService.error(error);
+                    this.loading = false;
+                });
+    }
 }

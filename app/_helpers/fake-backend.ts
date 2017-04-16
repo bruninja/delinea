@@ -86,7 +86,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                 // validation
                 let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
                 if (duplicateUser) {
-                    return connection.mockError(new Error('Username "' + newUser.username + '" is already taken'));
+                    return connection.mockError(new Error('Usuárop "' + newUser.username + '" ja está em uso!'));
                 }
 
                 // save new user
@@ -98,6 +98,23 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                 connection.mockRespond(new Response(new ResponseOptions({ status: 200 })));
 
                 return;
+            }
+
+            // update user
+            if (connection.request.method === RequestMethod.Put) {
+                if (connection.request.headers.get('Authorization') === 'Bearer fake-jwt-token') {
+                  let urlParts = connection.request.url.split('/');
+                  let id = parseInt(urlParts[urlParts.length - 1]);
+                  for (let i = 0; i < users.length; i++) {
+                      let user = users[i];
+                      if (user.id === id) {
+                          //update user
+                          users.splice(i, 0, 'users');
+                          localStorage.setItem('users', JSON.stringify(users));
+                          break;
+                      }
+                  }
+                }
             }
 
             // delete user
