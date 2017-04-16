@@ -1,5 +1,5 @@
 ﻿<div class="col-md-12">
-    <p>Olá {{currentUser.firstName}}! Você está logado!!</p>
+    <p>Olá {{currentUser.nomeCompleto}}! Você está logado!!</p>
     <p><a [routerLink]="['/login']">Sair</a></p>
     <h2 class="text-center">Listagem de Candidatos</h2>
     <table class="table table-striped">
@@ -13,10 +13,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <td>{{user.nomeCompleto}}</td>
+        <td>{{user.id}} - {{user.nomeCompleto}}</td>
         <td>{{user.email}}</td>
         <td>{{user.telefone}}</td>
-        <td><a (click)="deleteUser(user.id)">Apagar</a></td>
+        <td>
+          <a [routerLink]="['/edicao', user.id]">Editar</a>
+          <a (click)="deleteUser(user.id)">Apagar</a>
+        </td>
       </tr>
     </tbody>
   </table>
