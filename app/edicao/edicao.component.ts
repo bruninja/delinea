@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
@@ -18,6 +18,7 @@ export class EditarComponent implements OnInit {
 
     constructor(
         private userService: UserService,
+        private router: Router,
         private route: ActivatedRoute,
         private location: Location,
         private alertService: AlertService) { }

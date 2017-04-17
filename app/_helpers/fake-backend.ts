@@ -109,7 +109,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                       let user = users[i];
                       if (user.id === id) {
                           //update user
-                          users.splice(i, 0, 'users');
+                          users.splice(i,0);
                           localStorage.setItem('users', JSON.stringify(users));
                           break;
                       }
@@ -128,7 +128,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                         let user = users[i];
                         if (user.id === id) {
                             // delete user
-                            users.splice(i, 1);
+                            users.splice(i,1);
                             localStorage.setItem('users', JSON.stringify(users));
                             break;
                         }
