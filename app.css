@@ -5,3 +5,19 @@
 .help-block {
     font-size: 12px;
 }
+
+.btn-link {
+  font-size: 20px;
+}
+
+.panel {
+ padding: 20px;
+}
+
+.carregando {
+  position:fixed; /* Forma de posicionamento - FIXA */
+  top:50%; /* Distante 50% do topo da tela do usuário */
+  left:50%; /* Distante 50% do lado esquerdo da tela do usuário */
+  margin-top:-100px; /* Margem negativa para o topo com a metade do valor da altura da imagem */
+  margin-left:-125px; /* Margem negativa para a esquerda com a metade do valor da largura da imagem */
+  }

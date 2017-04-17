@@ -1,7 +1,9 @@
 ﻿<div class="col-md-12">
-    <p>Olá {{currentUser.nomeCompleto}}! Você está logado!!</p>
-    <p><a [routerLink]="['/login']">Sair</a></p>
+    <p>Olá {{currentUser.nomeCompleto}}. Você está logado! </p>
+    <p><a [routerLink]="['/login']"><i class="fa fa-sign-out" aria-hidden="true"></i>
+ Logout</a></p>
     <h2 class="text-center">Listagem de Candidatos</h2>
+    <br>
     <table class="table table-striped">
     <thead>
       <tr>
@@ -17,8 +19,8 @@
         <td>{{user.email}}</td>
         <td>{{user.telefone}}</td>
         <td>
-          <a [routerLink]="['/edicao', user.id]">Editar</a>
-          <a (click)="deleteUser(user.id)">Apagar</a>
+          <a [routerLink]="['/edicao', user.id]" class="btn btn-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+          <a (click)="deleteUser(user.id)" class="btn btn-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
       </tr>
     </tbody>

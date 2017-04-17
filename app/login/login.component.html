@@ -1,5 +1,6 @@
 ﻿<div class="col-md-6 col-md-offset-3">
-    <h2 class="text-center">Prova Delinea</h2>
+  <h1 class="text-center">Prova Delinea</h1>
+  <div class="login-panel panel panel-default">
     <form name="form" class="form-horizontal" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
             <label for="username" class="col-sm-2 control-label">Usuário</label>
@@ -21,4 +22,5 @@
             <a [routerLink]="['/register']" class="btn btn-link">Cadastrar-se</a>
         </div>
     </form>
+  </div>
 </div>
