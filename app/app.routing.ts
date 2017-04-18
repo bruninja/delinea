@@ -2,14 +2,14 @@
 
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
-import { RegisterComponent } from './register/index';
+import { CadastroComponent } from './cadastro/index';
 import { EditarComponent } from './edicao/index';
 import { AuthGuard } from './_guards/index';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
+    { path: 'cadastro', component: CadastroComponent },
     { path: 'edicao/:id', component: EditarComponent },
 
     // otherwise redirect to home

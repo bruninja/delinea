@@ -16,7 +16,7 @@ import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
-import { RegisterComponent } from './register/index';
+import { CadastroComponent } from './cadastro/index';
 import { EditarComponent } from './edicao/index';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { EditarComponent } from './edicao/index';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent,
+        CadastroComponent,
         EditarComponent
     ],
     providers: [
